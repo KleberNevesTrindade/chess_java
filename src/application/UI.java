@@ -1,6 +1,10 @@
 package application;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 import chess.ChessPiece;
+import chess.ChessPosition;
 import chess.Color;
 
 public class UI {
@@ -34,6 +38,18 @@ public class UI {
 	}	
 	//-----------------------------------------
 	
+	public static ChessPosition readChessPosition(Scanner sc) {
+		try {
+			String s = sc.nextLine();
+			char column = s.charAt(0);
+			int row = Integer.parseInt(s.substring(1));
+			return new ChessPosition(column,row);
+		}
+		catch (RuntimeException e) {
+			throw new InputMismatchException("Erro de leitura.");
+		}
+	}
+	
 	//-----------------------------------------
 	//UI.printBoard(chessMatch.getPieces())
 	
@@ -56,10 +72,12 @@ public class UI {
 			//System.out.print(piece);
 			
 			if (piece.getColor() == Color.WHITE) {
-	                System.out.print(ANSI_WHITE + piece + ANSI_RESET);
+	                //System.out.print(ANSI_WHITE + piece + ANSI_RESET);
+					System.out.print(piece);
 	            }
 	            else {
-	                System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
+	                //System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
+	            	System.out.print(piece);
 	          }
 	         
 		}
