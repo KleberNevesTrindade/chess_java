@@ -47,7 +47,6 @@ public class ChessMatch {
 		return capturedPiece;
 	}
 	
-	
 	private void validadeSourcePosition(Position position) {
 		if(!board.thereIsAPiece(position)) {
 			throw new ChessException("Não tem peça na posiçaão");
@@ -65,7 +64,7 @@ public class ChessMatch {
 		placeNewPiece('d', 2, new Rook(board, Color.WHITE));
 		placeNewPiece('e', 2, new Rook(board, Color.WHITE));
 		placeNewPiece('e', 1, new Rook(board, Color.WHITE));
-		placeNewPiece('d', 1, new King(board, Color.BLACK));
+		placeNewPiece('d', 1, new King(board, Color.WHITE));
 		
 		placeNewPiece('c', 7, new Rook(board, Color.BLACK));	
 		placeNewPiece('c', 8, new Rook(board, Color.BLACK));
