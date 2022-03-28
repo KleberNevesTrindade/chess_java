@@ -76,7 +76,7 @@ public class UI {
 					//System.out.print(piece);
 	            }
 	            else {
-	                System.out.print(ANSI_RED_BACKGROUND + ANSI_YELLOW + piece + ANSI_RESET);
+	                System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
 	            	//System.out.print(piece);
 	          }
 		}
