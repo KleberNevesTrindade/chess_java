@@ -49,7 +49,10 @@ public class ChessMatch {
 	
 	private void validadeSourcePosition(Position position) {
 		if(!board.thereIsAPiece(position)) {
-			throw new ChessException("Não tem peça na posiçaão");
+			throw new ChessException("Não tem peça na posiçaão de origem.");
+		}
+		if (!board.piece(position).isThereAnyPossibleMove()){
+			throw new ChessException("Não exite movimento possĩvel para a peça escolhida.");
 		}
 	}
 	
