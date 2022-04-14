@@ -16,7 +16,6 @@ import chess.ChessPosition;
 //--------------------------------------------
 
 public class Program {
-
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -61,6 +60,7 @@ public class Program {
 		UI.clearScreen();
 
 		sc.close();
+		
 	}
 
 }
