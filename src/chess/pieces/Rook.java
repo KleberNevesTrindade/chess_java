@@ -8,8 +8,7 @@ import chess.Color;
 public class Rook extends ChessPiece {
 
 	public Rook(Board board, Color color) {
-		super(board, color);
-		
+		super(board, color);	
 	}
 
 	@Override
@@ -20,7 +19,6 @@ public class Rook extends ChessPiece {
 	@Override
 	public boolean[][] possibleMoves() {
 		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
-		
 		Position p = new Position(0, 0);
 		//acima
 		p.setValues(position.getRow() - 1, position.getColumn());

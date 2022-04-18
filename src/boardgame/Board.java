@@ -26,7 +26,7 @@ public class Board {
 	// Pega a peća pela linha e coluna
 	public Piece piece(int row, int column) {
 		if (!positionExists(row, column)) {
-			throw new BoardException("Peća fora do tabuleiro");
+			throw new BoardException("Peça fora do tabuleiro");
 		}
 		return pieces[row][column];
 	}
@@ -34,14 +34,14 @@ public class Board {
 	// Pega a pela posićão
 	public Piece piece(Position position) {
 		if (!positionExists(position)) {
-			throw new BoardException("Peća fora do tabuleiro");
+			throw new BoardException("Peça fora do tabuleiro");
 		}
 		return pieces[position.getRow()][position.getColumn()];
 	}
 	
 	public void placePiece(Piece piece, Position position) {
 		if (thereIsAPiece(position)) {
-			throw new BoardException("Já existe uma peća nessa posićão? " + position);
+			throw new BoardException("Já existe uma peça nessa posição? " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
@@ -49,7 +49,7 @@ public class Board {
 	
 	public Piece removePiece(Position position) {
 		if (!positionExists(position)) {
-			throw new BoardException("Peća fora do tabuleiro");
+			throw new BoardException("Peça fora do tabuleiro");
 		}
 		if (piece(position) == null) {
 			return null;
@@ -70,7 +70,7 @@ public class Board {
 	
 	public boolean thereIsAPiece(Position position) {
 		if (!positionExists(position)) {
-			throw new BoardException("Peća fora do tabuleiro");
+			throw new BoardException("Peça fora do tabuleiro");
 		}
 		return (piece(position) != null);
 	}
